@@ -1,0 +1,25 @@
+<div class="row">
+	<div class="col-xs-6"><h3>{{ currentPost.title }}</h3></div>
+	<div class="col-xs-6 text-right"><h4>{{currentPost.created_at | date: 'dd/M/yyyy HH:mm'}}</h4></div>
+</div>
+<h4>
+{{currentPost.content}}  
+</h4>
+<!--
+Current love level : {{currentPost.loveIts}}
+-->
+<div class="row">
+	<div class="col-xs-1">
+		<button class="btn btn-success" (click)="like()">Love it</button>
+	</div>
+	<div class="col-xs-1">
+		<button class="btn btn-danger " (click)="unlike()">Don't love it!</button>
+	</div>
+	<div class="col-xs-10 text-right">
+		<button class="btn btn-danger " (click)="removeCurrentPost()">Supprimer Post</button>
+	</div>
+</div>
+
+
+
+
